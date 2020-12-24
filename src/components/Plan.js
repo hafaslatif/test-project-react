@@ -24,17 +24,18 @@ export default class Plan extends React.Component {
   }
 
   render() {
+    let { plan, features } = this.state;
     return (
       <div className="container">
-        <h1 className="text-center"> {this.state.plan.name} </h1>
+        <h1 className="text-center"> {plan.name} </h1>
         <p className="text-center">
           <strong> Fee: </strong>
-          {this.state.plan.fee}
+          {plan.fee}
         </p>
         <div className="card ">
           <div className="card-header"> Features </div>
           <ol className="list-group list-group-flush">
-            {this.state.features.map((feature) => (
+            {features.map((feature) => (
               <Feature feature={feature} />
             ))}
           </ol>

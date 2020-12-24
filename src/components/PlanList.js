@@ -17,6 +17,7 @@ export default class PlanList extends React.Component {
   }
 
   render() {
+    let { plans } = this.state;
     return (
       <div>
         <h1 className="text-center"> Plans </h1>
@@ -28,9 +29,10 @@ export default class PlanList extends React.Component {
             </tr>
           </thead>
           <tbody>
-            {this.state.plans.map((plan) => (
+            {plans.map((plan) => (
               <tr>
-                <td> {plan.name} </td> <td> {plan.fee} </td>
+                <td> {plan.name} </td>
+                <td> {plan.fee} </td>
                 <td>
                   <Link
                     to={{ pathname: `/Plan/${plan.id}` }}
