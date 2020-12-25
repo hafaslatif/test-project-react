@@ -17,7 +17,8 @@ export default class PlanList extends React.Component {
   }
 
   render() {
-    let { plans } = this.state;
+    const { plans } = this.state;
+
     return (
       <div>
         <h1 className="text-center"> Plans </h1>
@@ -30,7 +31,7 @@ export default class PlanList extends React.Component {
           </thead>
           <tbody>
             {plans.map((plan) => (
-              <tr>
+              <tr key={plan.id}>
                 <td> {plan.name} </td>
                 <td> {plan.fee} </td>
                 <td>

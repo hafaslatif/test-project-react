@@ -25,6 +25,7 @@ export default class Plan extends React.Component {
 
   render() {
     let { plan, features } = this.state;
+
     return (
       <div className="container">
         <h1 className="text-center"> {plan.name} </h1>
@@ -36,7 +37,7 @@ export default class Plan extends React.Component {
           <div className="card-header"> Features </div>
           <ol className="list-group list-group-flush">
             {features.map((feature) => (
-              <Feature feature={feature} />
+              <Feature key={feature.id} feature={feature} />
             ))}
           </ol>
         </div>

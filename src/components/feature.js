@@ -1,8 +1,8 @@
 import React from "react";
 
-const Feature = (props) => (
+const Feature = ({ feature: { name } }) => (
   <li className="list-group-item">
-    <strong> {props.feature.name} </strong>
+    <strong> {name} </strong>
   </li>
 );
 export default Feature;
