@@ -1,1 +1,1 @@
-export const plansApiUrl = `http://localhost:3001/plans/`;
+export const plansApiUrl = `http://localhost:3001/apis/`;
